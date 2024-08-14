@@ -3,10 +3,8 @@
 #include <fstream>
 using namespace std;
 
-class Employee{
+class Employee:public Person{
 private:
-    string name,password;
-    int id;
     double salary;
 public:
     //Constructors
@@ -14,36 +12,18 @@ public:
     password=id=salary=0;
     }
     Employee(string name,string password,int id,double salary){
-    this->name=name;
-    this->password=password;
+    this->name=Validate::Valiname(name);
+    this->password=Validate::Valipassword(password);
     this->id=id;
-    this->salary=salary;
+    this->salary=Validate::Setsalary(salary);
     }
 
     //Setters
-    void setName(string name){
-    this->name=name;
-    }
-    void setPassword(string password){
-    this->password=password;
-    }
-    void setId(int id){
-    this->id=id;
-    }
     void setSalary(double salary){
-    this->salary=salary;
+     this->salary=Validate::Setsalary(salary);
     }
 
     //Getters
-    string getName(){
-    return name;
-    }
-    string getPassword(){
-    return password;
-    }
-    int getId(){
-    return id;
-    }
     double getSalary(){
     return salary;
     }
