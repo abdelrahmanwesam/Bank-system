@@ -147,22 +147,22 @@ public:
 };
 //===================================================
 
-class Clintt:public Person
+class Clinte:public Person
 {
 //Data:
 	double balnce;
 public:
 	//Cons:
-	Clintt() {
+	Clinte() {
 		this->balnce = 0;
 	}
-	Clintt(string name, string passwrd,double balnce,int id) {
+	Clinte(string name, string passwrd,double balnce,int id) {
 		this->name = Validate::Valiname(name);
 		this->passwrd = Validate::Valipasswrd(passwrd);
 		this->balnce = Validate::Valibalnce(balnce);
 		this->id = id;
 	}
-	Clintt(string name, string passwrd,int id) {
+	Clinte(string name, string passwrd,int id) {
 		this->passwrd = Validate::Valipasswrd(passwrd);
 		this->name = Validate::Valiname(name);
 		this->id = id;
@@ -229,4 +229,31 @@ public:
 		cout << "\n\nBalnce = " << this->balnce<<endl;
 	}
 };
+//============================================================
 
+class Employee:public Person{
+private:
+    double salary;
+public:
+    //Constructors
+    Employee(){
+    password=id=salary=0;
+    }
+    Employee(string name,string password,int id,double salary){
+    this->name=Validate::Valiname(name);
+    this->password=Validate::Valipassword(password);
+    this->id=id;
+    this->salary=Validate::Setsalary(salary);
+    }
+
+    //Setters
+    void setSalary(double salary){
+     this->salary=Validate::Setsalary(salary);
+    }
+
+    //Getters
+    double getSalary(){
+    return salary;
+    }
+
+};
