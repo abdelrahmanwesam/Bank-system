@@ -4,6 +4,8 @@
 #include <cctype>
 #include <string>
 #include <fstream>
+#include "Parser.h"
+
 using namespace std;
 class Validate
 {
@@ -312,4 +314,9 @@ int main() {
 	a.InfoData();
 	cout << "\n======================" << endl;
 	
+		Parser::parseFromFile("client.txt");
+		Parser::parseFromFile("employee.txt");
+		Parser::parseFromFile("admin.txt");
+
+		return 0;
 }
