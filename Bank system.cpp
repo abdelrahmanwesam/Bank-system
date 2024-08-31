@@ -119,7 +119,7 @@ public:
 		this->id = 0;
 		this->password = "***********";
 	}
-	Person(string name, string passwrd, int id) {
+	Person(int id, string name,string passwrd) {
 		this->name = Validate::Valiname(name);
 		this->password = Validate::Valipassword(passwrd);
 		this->id = id;
@@ -161,13 +161,13 @@ public:
 	Client() {
 		this->balnce = 0;
 	}
-	Client(string name, string passwrd, double balnce, int id) {
+	Client( int id, string name , string password, double balance) {
 		this->name = Validate::Valiname(name);
 		this->password = Validate::Valipassword(passwrd);
 		this->balnce = Validate::Valibalnce(balnce);
 		this->id = id;
 	}
-	Client(string name, string passwrd, int id) {
+	Client(int id, string name, string password ) {
 		this->password = Validate::Valipassword(passwrd);
 		this->name = Validate::Valiname(name);
 		this->id = id;
@@ -244,7 +244,7 @@ public:
 	Employee() {
 		password = id = salary = 0;
 	}
-	Employee(string name, string password, int id, double salary) {
+	Employee(int id, string name, string password, double salary) {
 		this->name = Validate::Valiname(name);
 		this->password = Validate::Valipassword(password);
 		this->id = id;
@@ -274,7 +274,7 @@ public:
 	Admin() {
 		salary = 0;
 	}
-	Admin(string name, string password, int id, double salary) {
+	Admin(int id, string name, string password, double salary) {
 		this->name = Validate::Valiname(name);
 		this->password = Validate::Valipassword(password);
 		this->id = id;
@@ -303,16 +303,16 @@ public:
 };
 
 int main() {
-	Client c("Ahmed", "123abceed", 1500, 123);
-	Employee e("Abdelrahman", "azdf32543", 111, 6000);
-	Admin a("mohamed", "mo200255", 12547, 7000);
-	c.Depoist(1000);
-	c.InfoData();
-	cout << "\n======================" << endl;
-	e.InfoData();
-	cout << "\n======================" << endl;
-	a.InfoData();
-	cout << "\n======================" << endl;
+	///*Client c("Ahmed", "123abceed", 1500, 123);
+	//Employee e("Abdelrahman", "azdf32543", 111, 6000);
+	//Admin a("mohamed", "mo200255", 12547, 7000);*/
+	//c.Depoist(1000);
+	//c.InfoData();
+	//cout << "\n======================" << endl;
+	//e.InfoData();
+	//cout << "\n======================" << endl;
+	//a.InfoData();
+	//cout << "\n======================" << endl;
 	
 		Parser::parseFromFile("client.txt");
 		Parser::parseFromFile("employee.txt");
