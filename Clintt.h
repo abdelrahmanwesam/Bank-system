@@ -7,22 +7,22 @@
 #include "Validate.h"
 #include "Preson.h"
 using namespace std;
-class Clintt:public Person
+class Client:public Person
 {
 //Data:
 	double balnce;
 public:
 	//Cons:
-	Clintt() {
+	Client() {
 		this->balnce = 0;
 	}
-	Clintt(string name, string passwrd,double balnce,int id) {
+	Client(string name, string passwrd,double balnce,int id) {
 		this->name = Validate::Valiname(name);
 		this->passwrd = Validate::Valipasswrd(passwrd);
 		this->balnce = Validate::Valibalnce(balnce);
 		this->id = id;
 	}
-	Clintt(string name, string passwrd,int id) {
+	Client(string name, string passwrd,int id) {
 		this->passwrd = Validate::Valipasswrd(passwrd);
 		this->name = Validate::Valiname(name);
 		this->id = id;
@@ -76,7 +76,7 @@ public:
 			this->balnce = this->balnce - n;
 		}
 	}
-	void Transfer(Clintt& a, double m) {
+	void Transfer(Client& a, double m) {
 		if (this->balnce < m) {
 			cout << "\nError ! \nYou ara not have this Amount so transfer this amount for ( " << a.Getname() << " ) \n\n";
 		}
