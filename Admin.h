@@ -19,13 +19,13 @@ public:
 	Admin() {
 		salary = 0;
 	}
-	Admin(string name, string password, int id, double salary) {
+	Admin(int id, string name, string password, double salary) {
 		this->name = Validate::Valiname(name);
 		this->password = Validate::Valipassword(password);
 		this->id = id;
 		this->salary = Validate::Setsalary(salary);
 	}
-	Admin(string name, string passwrd, int id) {
+	Admin(int id, string name, string password ) {
 		this->password = Validate::Valipassword(passwrd);
 		this->name = Validate::Valiname(name);
 		this->id = id;
