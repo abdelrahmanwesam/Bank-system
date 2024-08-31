@@ -27,7 +27,7 @@ public:
         return result;
     }
 
-    // Parse a line into a Client object
+   
     static Client parseToClient(const string& line) {
         vector<string> tokens = split(line);
         int id = stoi(tokens[0]);
@@ -37,7 +37,7 @@ public:
         return Client(id, name, password, balance);
     }
 
-    // Parse a line into an Employee object
+    
     static Employee parseToEmployee(const string& line) {
         vector<string> tokens = split(line);
         int id = stoi(tokens[0]);
@@ -47,7 +47,7 @@ public:
         return Employee(id, name, password, salary);
     }
 
-    // Parse a line into an Admin object
+    
     static Admin parseToAdmin(const string& line) {
         vector<string> tokens = split(line);
         int id = stoi(tokens[0]);
@@ -57,7 +57,7 @@ public:
         return Admin(id, name, password, salary);
     }
 
-    // Read from a file and parse each line based on the type of data
+   
     static void parseFromFile(const string& filename) {
         ifstream file(filename);
         string line;
